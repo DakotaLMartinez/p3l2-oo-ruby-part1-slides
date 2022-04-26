@@ -1,0 +1,10 @@
+body {
+  background-color: aqua;
+}
+
+.prism-code {
+  padding: 1em 0.75em;
+  max-width: 80%; 
+  white-space: normal !important;
+  word-break: break-word !important;
+}
