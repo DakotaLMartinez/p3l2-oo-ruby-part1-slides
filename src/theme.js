@@ -37,7 +37,7 @@ export default {
   },
   styles: {
     p: {
-      padding: "0 3em"
+      padding: "0.5em 2em"
     },
     blockquote: {
       bg: "lightgray",
