@@ -5,19 +5,19 @@ function Textarea({label}) {
 
   useEffect(() => {
     const storedValue = localStorage.getItem(label)
-    if (storedValue !== text) {
-      setText()
-    }
+    storedValue && setText(storedValue)
   }, [])
 
   useEffect(() => {
-    
-    
     localStorage.setItem(label, text);
-  }, text)
+  }, [text])
+
+  const handleChange = (e) => {
+    setText(e.target.value);
+  }
 
   return (
-    <textarea onChange={e => setText(e.target.value)}>
+    <textarea onChange={handleChange} onKeyDown={e => e.stopPropagation()} onKeyDownCapture={e => e.stopPropagation()} value={text}>
       
     </textarea>
   )

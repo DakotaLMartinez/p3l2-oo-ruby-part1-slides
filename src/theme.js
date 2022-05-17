@@ -39,6 +39,11 @@ export default {
     p: {
       padding: "0.5em 2em"
     },
+    ul: {
+      width: '65%',
+      maxWidth: '900px',
+      margin: '0 auto'
+    },
     blockquote: {
       bg: "lightgray",
       
