@@ -41,10 +41,22 @@ import Textarea from './components/Textarea';
 
 ## 📆 Agenda
 
-- Discuss Object Oriented Programming and its strengths and weaknesses
-- Use a diagram to visualize the important concepts in OO ruby
-- Introduce the features and changes to our dog walker application that we'll be working on today
-- 
+- Part 1
+  - Discuss Object Oriented Programming and its strengths and weaknesses
+  - Use a diagram to visualize the important concepts in OO ruby
+  - Introduce the features and changes to our dog walker application that we'll be working on today
+  - Discuss working with Time objects in Ruby
+  - Build out our Dog class so we can make new instances
+- Part 2
+  - Add the ability to walk and feed dogs
+  - Add the ability to check if a dog needs a walk or a meal
+  - introduce a common error message in OO ruby and how to handle it
+  - Finish our Dog class
+  - rework the dogs_data and cli files to work with our new Object Oriented approach
+- Review + Q&A
+
+
+
 
 <Note>
 
@@ -288,6 +300,7 @@ review diagram
 <Layout>
 
 ## Dog Walker CLI Part 2
+
 <br/>
 
 #### Key New Features
@@ -420,13 +433,13 @@ In the `lib/dog_walker_cli.rb` file, we're going to make the following changes:
 - Again, we'll start our cli application by running the following command in our terminal:
 
 <TerminalCommand>
-./bin/run
+bundle exec ./bin/run
 </TerminalCommand>
 
 - If we want to play around with our code without starting the CLI, we can run the following command in our terminal:
 
 <TerminalCommand>
-./bin/console
+bundle exec ./bin/console
 </TerminalCommand>
 
 </Layout>
@@ -553,8 +566,7 @@ The integer extension allows us to convert integers into duration objects and do
 This allows us to:
 - compare times with reference to the current time
 - use the `between?` method on a time to check if one time is between two other times (a beginning and ending time passed as arguments in that order).
-- We can also take a time and add a duration to it to get another time after it
-- Or we can take a time and subtract a duration from it and get another time before it
+- We can also take a time and add a duration to it to get another time after it by using the `.ago` and `.from_now` methods on any duration we choose
 
 We'll be using this knowledge in our `needs_a_walk?` and `needs_a_meal?` methods.
 
@@ -626,7 +638,7 @@ class Dog
 end
 ```
 
-We want to be able to initialize a new instance of the Dog class with a name, age, breed, and favorite_treats property
+We want to be able to initialize a new instance of the Dog class with a name, age, breed, and image_url property
 
 ### What do we need to do first?
 
